@@ -1,0 +1,68 @@
+#!/usr/bin/env bash
+#PBS -q auto_free
+#PBS -j oe
+
+set -euo pipefail
+
+if [[ -f /etc/profile.d/modules.sh ]]; then
+    source /etc/profile.d/modules.sh
+fi
+module load openmpi/gcc/64/4.1.8
+mpi_prefix=$(dirname "$(dirname "$(command -v mpirun)")")
+
+: "${PROJECT_DIR:?PROJECT_DIR is required}"
+: "${WEAK_DATA_DIR:?WEAK_DATA_DIR is required}"
+: "${FAMILY:?FAMILY must be berkstan or uk}"
+: "${SCALE:?SCALE is required}"
+: "${TOTAL_CPUS:?TOTAL_CPUS is required}"
+
+cd "$PROJECT_DIR"
+[[ -f "$WEAK_DATA_DIR/READY" ]] || { echo "Weak data are not ready" >&2; exit 2; }
+
+case "$FAMILY" in
+    berkstan) dataset="$WEAK_DATA_DIR/berkstan-r${SCALE}.prcsr" ;;
+    uk) dataset="$WEAK_DATA_DIR/uk-induced-${SCALE}.prcsr" ;;
+    *) echo "Unknown FAMILY=$FAMILY" >&2; exit 3 ;;
+esac
+[[ -s "$dataset" ]] || { echo "Missing dataset: $dataset" >&2; exit 4; }
+
+program=./build/pagerank
+repetitions=5
+job_id=${PBS_JOBID%%.*}
+output_dir="results/vanda/weak/raw"
+mkdir -p "$output_dir" "results/vanda/weak/logs"
+metrics_file="$output_dir/${job_id}-weak-${FAMILY}-${SCALE}.csv"
+node_count=$(sort -u "$PBS_NODEFILE" | wc -l | tr -d ' ')
+
+run_parallel() {
+    local mode=$1 ranks=$2 threads=$3 record=$4 repetition=$5
+    local ranks_per_node=$((ranks / node_count))
+    export OMP_NUM_THREADS=$threads
+    export OMP_PLACES=cores
+    export OMP_PROC_BIND=spread
+    args=("$program" --input "$dataset" --input-format csr --mode "$mode"
+          --threads "$threads" --top-k 0
+          --run-id "weak-${FAMILY}-${SCALE}-${ranks}x${threads}-rep${repetition}")
+    [[ "$record" == yes ]] && args+=(--metrics "$metrics_file")
+    mpirun --prefix "$mpi_prefix" --hostfile "$PBS_NODEFILE" \
+        --mca plm ^tm --mca ras ^tm --mca osc ^ucx \
+        -np "$ranks" --map-by "ppr:${ranks_per_node}:node:PE=${threads}" \
+        --bind-to core "${args[@]}"
+}
+
+run_config() {
+    local mode=$1 ranks=$2 threads=$3
+    echo "Warm-up: $FAMILY $SCALE $mode ${ranks}x${threads}"
+    run_parallel "$mode" "$ranks" "$threads" no 0
+    for repetition in $(seq 1 "$repetitions"); do
+        run_parallel "$mode" "$ranks" "$threads" yes "$repetition"
+    done
+}
+
+if (( TOTAL_CPUS % 4 != 0 )); then
+    echo "TOTAL_CPUS must be divisible by four" >&2
+    exit 5
+fi
+run_config mpi "$TOTAL_CPUS" 1
+run_config hybrid "$((TOTAL_CPUS / 4))" 4
+echo "Completed: $metrics_file"

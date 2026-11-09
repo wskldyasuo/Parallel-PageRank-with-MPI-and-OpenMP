@@ -1,0 +1,90 @@
+#!/usr/bin/env bash
+#PBS -q auto_free
+#PBS -j oe
+
+set -euo pipefail
+
+if [[ -f /etc/profile.d/modules.sh ]]; then
+    source /etc/profile.d/modules.sh
+fi
+module load openmpi/gcc/64/4.1.8
+mpi_prefix=$(dirname "$(dirname "$(command -v mpirun)")")
+
+: "${PROJECT_DIR:?PROJECT_DIR must be supplied with qsub -v}"
+: "${DATASET_KEY:?DATASET_KEY must name one of the four datasets}"
+
+cd "$PROJECT_DIR"
+
+case "$DATASET_KEY" in
+    google)   dataset="data/processed/web-Google.prcsr" ;;
+    berkstan) dataset="data/processed/web-BerkStan.prcsr" ;;
+    enwiki)   dataset="data/processed/enwiki-2013.prcsr" ;;
+    uk)       dataset="data/processed/uk-2002.prcsr" ;;
+    *) echo "Unknown DATASET_KEY: $DATASET_KEY" >&2; exit 2 ;;
+esac
+
+program=./build/pagerank
+repetitions=5
+job_id=${PBS_JOBID%%.*}
+output_dir="results/vanda/e3/raw"
+mkdir -p "$output_dir" "results/vanda/e3/logs"
+metrics_file="$output_dir/${job_id}-e3-${DATASET_KEY}.csv"
+node_count=$(sort -u "$PBS_NODEFILE" | wc -l | tr -d ' ')
+
+run_case() {
+    local partition=$1
+    local ranks=$2
+    local threads=$3
+    local record=$4
+    local repetition=$5
+    local config="${ranks}x${threads}"
+    local mode=hybrid
+    if (( threads == 1 )); then
+        mode=mpi
+    fi
+
+    local ranks_per_node=$((ranks / node_count))
+    export OMP_NUM_THREADS=$threads
+    export OMP_PLACES=cores
+    export OMP_PROC_BIND=spread
+
+    local args=(
+        "$program"
+        --input "$dataset"
+        --input-format csr
+        --mode "$mode"
+        --threads "$threads"
+        --partition "$partition"
+        --top-k 0
+        --run-id "e3-${DATASET_KEY}-${partition}-${config}-rep${repetition}"
+    )
+    if [[ "$record" == yes ]]; then
+        args+=(--metrics "$metrics_file")
+    fi
+
+    mpirun --prefix "$mpi_prefix" --hostfile "$PBS_NODEFILE" \
+        --mca plm ^tm --mca ras ^tm --mca osc ^ucx \
+        -np "$ranks" \
+        --map-by "ppr:${ranks_per_node}:node:PE=${threads}" \
+        --bind-to core \
+        "${args[@]}"
+}
+
+echo "PBS job:      $PBS_JOBID"
+echo "Dataset:      $dataset"
+echo "Nodes:        $node_count"
+echo "Metrics file: $metrics_file"
+
+for partition in vertices in-edges; do
+    for config in "32 1" "4 8"; do
+        read -r ranks threads <<< "$config"
+        echo "Warm-up: partition=$partition config=${ranks}x${threads}"
+        run_case "$partition" "$ranks" "$threads" no 0
+        for repetition in $(seq 1 "$repetitions"); do
+            echo "Measured run $repetition/$repetitions: partition=$partition config=${ranks}x${threads}"
+            run_case "$partition" "$ranks" "$threads" yes "$repetition"
+        done
+    done
+done
+
+echo "Completed: $metrics_file"

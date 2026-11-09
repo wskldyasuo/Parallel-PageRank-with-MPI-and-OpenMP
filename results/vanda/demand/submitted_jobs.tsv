@@ -1,0 +1,9 @@
+job_id	suite	dataset	total_cpus	nodes	memory_per_node
+1518174.stdct-mgmt-02	demand	google	32	1	16gb
+1518176.stdct-mgmt-02	demand	berkstan	32	1	16gb
+1518178.stdct-mgmt-02	demand	enwiki	32	1	32gb
+1518180.stdct-mgmt-02	demand	uk	32	1	48gb
+1518265.stdct-mgmt-02	demand	google	64	2	12gb
+1518266.stdct-mgmt-02	demand	berkstan	64	2	12gb
+1518267.stdct-mgmt-02	demand	enwiki	64	2	24gb
+1518268.stdct-mgmt-02	demand	uk	64	2	32gb

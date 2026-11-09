@@ -1,0 +1,67 @@
+#!/usr/bin/env bash
+#PBS -q auto_free
+#PBS -j oe
+#PBS -N wf_uk
+#PBS -l select=1:ncpus=32:mpiprocs=32:mem=48gb
+#PBS -l walltime=02:00:00
+
+set -euo pipefail
+
+if [[ -f /etc/profile.d/modules.sh ]]; then
+    source /etc/profile.d/modules.sh
+fi
+module load openmpi/gcc/64/4.1.8
+mpi_prefix=$(dirname "$(dirname "$(command -v mpirun)")")
+
+: "${PROJECT_DIR:?PROJECT_DIR must be supplied with qsub -v}"
+cd "$PROJECT_DIR"
+make -j4 all
+
+dataset="data/processed/uk-2002.prcsr"
+program="./build/pagerank"
+repetitions=5
+job_id=${PBS_JOBID%%.*}
+output_dir="results/vanda/waterfall_uk/raw"
+metrics_file="$output_dir/${job_id}-waterfall-uk.csv"
+mkdir -p "$output_dir" "results/vanda/waterfall_uk/logs"
+
+run_stage() {
+    local stage=$1 mode=$2 ranks=$3 threads=$4 partition=$5 exchange=$6
+    local record=$7 repetition=$8
+    local args=(
+        "$program" --input "$dataset" --input-format csr
+        --mode "$mode" --threads "$threads" --partition "$partition"
+        --score-exchange "$exchange" --top-k 0
+        --run-id "waterfall-uk-${stage}-rep${repetition}"
+    )
+    [[ "$record" == yes ]] && args+=(--metrics "$metrics_file")
+    if [[ "$mode" == serial ]]; then
+        "${args[@]}"
+        return
+    fi
+    export OMP_NUM_THREADS=$threads
+    export OMP_PLACES=cores
+    export OMP_PROC_BIND=spread
+    mpirun --prefix "$mpi_prefix" --hostfile "$PBS_NODEFILE" \
+        --mca plm ^tm --mca ras ^tm --mca osc ^ucx \
+        -np "$ranks" --map-by "ppr:${ranks}:node:PE=${threads}" \
+        --bind-to core "${args[@]}"
+}
+
+measure_stage() {
+    local stage=$1 mode=$2 ranks=$3 threads=$4 partition=$5 exchange=$6
+    echo "Warm-up: $stage"
+    run_stage "$stage" "$mode" "$ranks" "$threads" "$partition" "$exchange" no 0
+    for repetition in $(seq 1 "$repetitions"); do
+        echo "Measured run $repetition/$repetitions: $stage"
+        run_stage "$stage" "$mode" "$ranks" "$threads" "$partition" "$exchange" yes "$repetition"
+    done
+}
+
+measure_stage serial serial 1 1 vertices full
+measure_stage mpi-only mpi 32 1 vertices full
+measure_stage hybrid hybrid 2 16 vertices full
+measure_stage in-edge hybrid 2 16 in-edges full
+measure_stage on-demand hybrid 2 16 in-edges demand
+
+echo "Completed: $metrics_file"

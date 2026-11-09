@@ -1,0 +1,15 @@
+{
+  "format": "PRCSR001",
+  "replicas": 1,
+  "components": 1,
+  "inputs": [
+    "data/raw/enwiki-2013/enwiki-2013.txt"
+  ],
+  "vertices": 4203323,
+  "edges": 101311614,
+  "file_bytes": 489312964,
+  "input_load_seconds": 13.732898791,
+  "assembly_seconds": 0.070352208999999999,
+  "write_seconds": 0.49126208300000002,
+  "total_seconds": 14.294513917
+}

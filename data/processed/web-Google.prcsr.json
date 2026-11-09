@@ -1,0 +1,15 @@
+{
+  "format": "PRCSR001",
+  "replicas": 1,
+  "components": 1,
+  "inputs": [
+    "data/raw/web-Google.txt"
+  ],
+  "vertices": 875713,
+  "edges": 5105039,
+  "file_bytes": 37934464,
+  "input_load_seconds": 0.66378104100000002,
+  "assembly_seconds": 0.0079676250000000007,
+  "write_seconds": 0.031843000000000003,
+  "total_seconds": 0.70359225000000003
+}

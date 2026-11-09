@@ -1,0 +1,13 @@
+job_id	dataset	scope	max_cpus	nodes	memory_per_node
+1520632.stdct-mgmt-02	google	single	32	1	16gb
+1520633.stdct-mgmt-02	google	64	64	2	16gb
+1520634.stdct-mgmt-02	google	128	128	4	16gb
+1520635.stdct-mgmt-02	berkstan	single	32	1	16gb
+1520636.stdct-mgmt-02	berkstan	64	64	2	16gb
+1520637.stdct-mgmt-02	berkstan	128	128	4	16gb
+1520638.stdct-mgmt-02	enwiki	single	32	1	32gb
+1520639.stdct-mgmt-02	enwiki	64	64	2	32gb
+1520640.stdct-mgmt-02	enwiki	128	128	4	32gb
+1520641.stdct-mgmt-02	uk	single	32	1	48gb
+1520642.stdct-mgmt-02	uk	64	64	2	48gb
+1520643.stdct-mgmt-02	uk	128	128	4	48gb

@@ -1,0 +1,13 @@
+job_id	family	scale	total_cpus	nodes	memory_per_node	dependency
+1508458.stdct-mgmt-02	berkstan	1	4	1	8gb	1508457.stdct-mgmt-02
+1508459.stdct-mgmt-02	uk	1of32	4	1	8gb	1508457.stdct-mgmt-02
+1508460.stdct-mgmt-02	berkstan	2	8	1	8gb	1508457.stdct-mgmt-02
+1508461.stdct-mgmt-02	uk	1of16	8	1	8gb	1508457.stdct-mgmt-02
+1508462.stdct-mgmt-02	berkstan	4	16	1	12gb	1508457.stdct-mgmt-02
+1508463.stdct-mgmt-02	uk	1of8	16	1	12gb	1508457.stdct-mgmt-02
+1508464.stdct-mgmt-02	berkstan	8	32	1	16gb	1508457.stdct-mgmt-02
+1508465.stdct-mgmt-02	uk	1of4	32	1	20gb	1508457.stdct-mgmt-02
+1508466.stdct-mgmt-02	berkstan	16	64	2	24gb	1508457.stdct-mgmt-02
+1508467.stdct-mgmt-02	uk	1of2	64	2	24gb	1508457.stdct-mgmt-02
+1508468.stdct-mgmt-02	berkstan	32	128	4	32gb	1508457.stdct-mgmt-02
+1508469.stdct-mgmt-02	uk	1of1	128	4	32gb	1508457.stdct-mgmt-02

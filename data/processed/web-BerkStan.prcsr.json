@@ -1,0 +1,15 @@
+{
+  "format": "PRCSR001",
+  "replicas": 1,
+  "components": 1,
+  "inputs": [
+    "data/raw/web-BerkStan.txt"
+  ],
+  "vertices": 685230,
+  "edges": 7600595,
+  "file_bytes": 44107028,
+  "input_load_seconds": 0.683443209,
+  "assembly_seconds": 0.0084237909999999999,
+  "write_seconds": 0.040579875000000001,
+  "total_seconds": 0.73244712499999998
+}

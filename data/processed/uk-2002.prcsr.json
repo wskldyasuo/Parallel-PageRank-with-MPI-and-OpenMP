@@ -1,0 +1,16 @@
+{
+  "format": "PRCSR001",
+  "converter": "build/convert_snap_to_csr",
+  "input": "data/raw/uk-2002/uk-2002.txt",
+  "dense_zero_based_ids": true,
+  "vertices": 18520486,
+  "raw_edges": 298113762,
+  "unique_edges": 298113762,
+  "duplicate_edges": 0,
+  "count_seconds": 12.3188,
+  "fill_seconds": 11.6165,
+  "deduplicate_seconds": 0.636361,
+  "write_seconds": 1.27988,
+  "total_seconds": 25.8644,
+  "sha256": "6e27cff2a336607610b381f5793b7a8aea6ca1eb866afb4b3b0b694ba174883b"
+}

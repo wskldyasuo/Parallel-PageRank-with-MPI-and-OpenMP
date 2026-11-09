@@ -1,0 +1,485 @@
+PBS job:      1510351.stdct-mgmt-02
+Dataset:      data/processed/web-Google.prcsr
+Nodes:        1
+Metrics file: results/vanda/e3/raw/1510351-e3-google.csv
+Warm-up: partition=vertices config=32x1
+mode                  = mpi
+dataset               = data/processed/web-Google.prcsr
+mpi ranks             = 32
+threads per rank      = 1
+partition             = vertices
+vertices              = 875713
+edges                 = 5105039
+load seconds          = 1.189919403
+distribution seconds  = 0.012620875
+solve seconds         = 0.81339675
+update imbalance      = 1.23786330001
+work imbalance        = 1.43720789626
+iterations            = 146
+converged             = yes
+last L1 change        = 8.89111561276e-13
+one-step residual     = 7.54695955815e-13
+rank sum error        = 2.60014232367e-13
+validation            = PASS
+top 0 ranks:
+Measured run 1/5: partition=vertices config=32x1
+mode                  = mpi
+dataset               = data/processed/web-Google.prcsr
+mpi ranks             = 32
+threads per rank      = 1
+partition             = vertices
+vertices              = 875713
+edges                 = 5105039
+load seconds          = 0.022897247
+distribution seconds  = 0.011612426
+solve seconds         = 0.798736958
+update imbalance      = 1.22244909807
+work imbalance        = 1.43720789626
+iterations            = 146
+converged             = yes
+last L1 change        = 8.89111561276e-13
+one-step residual     = 7.54695955815e-13
+rank sum error        = 2.60014232367e-13
+validation            = PASS
+top 0 ranks:
+Measured run 2/5: partition=vertices config=32x1
+mode                  = mpi
+dataset               = data/processed/web-Google.prcsr
+mpi ranks             = 32
+threads per rank      = 1
+partition             = vertices
+vertices              = 875713
+edges                 = 5105039
+load seconds          = 0.022984829
+distribution seconds  = 0.011752299
+solve seconds         = 0.798308483
+update imbalance      = 1.22084264646
+work imbalance        = 1.43720789626
+iterations            = 146
+converged             = yes
+last L1 change        = 8.89111561276e-13
+one-step residual     = 7.54695955815e-13
+rank sum error        = 2.60014232367e-13
+validation            = PASS
+top 0 ranks:
+Measured run 3/5: partition=vertices config=32x1
+mode                  = mpi
+dataset               = data/processed/web-Google.prcsr
+mpi ranks             = 32
+threads per rank      = 1
+partition             = vertices
+vertices              = 875713
+edges                 = 5105039
+load seconds          = 0.021934147
+distribution seconds  = 0.011800885
+solve seconds         = 0.801579287
+update imbalance      = 1.22090140168
+work imbalance        = 1.43720789626
+iterations            = 146
+converged             = yes
+last L1 change        = 8.89111561276e-13
+one-step residual     = 7.54695955815e-13
+rank sum error        = 2.60014232367e-13
+validation            = PASS
+top 0 ranks:
+Measured run 4/5: partition=vertices config=32x1
+mode                  = mpi
+dataset               = data/processed/web-Google.prcsr
+mpi ranks             = 32
+threads per rank      = 1
+partition             = vertices
+vertices              = 875713
+edges                 = 5105039
+load seconds          = 0.022027392
+distribution seconds  = 0.011505888
+solve seconds         = 0.798418013
+update imbalance      = 1.22212655688
+work imbalance        = 1.43720789626
+iterations            = 146
+converged             = yes
+last L1 change        = 8.89111561276e-13
+one-step residual     = 7.54695955815e-13
+rank sum error        = 2.60014232367e-13
+validation            = PASS
+top 0 ranks:
+Measured run 5/5: partition=vertices config=32x1
+mode                  = mpi
+dataset               = data/processed/web-Google.prcsr
+mpi ranks             = 32
+threads per rank      = 1
+partition             = vertices
+vertices              = 875713
+edges                 = 5105039
+load seconds          = 0.022235056
+distribution seconds  = 0.012270061
+solve seconds         = 0.802032829
+update imbalance      = 1.22266294548
+work imbalance        = 1.43720789626
+iterations            = 146
+converged             = yes
+last L1 change        = 8.89111561276e-13
+one-step residual     = 7.54695955815e-13
+rank sum error        = 2.60014232367e-13
+validation            = PASS
+top 0 ranks:
+Warm-up: partition=vertices config=4x8
+mode                  = hybrid
+dataset               = data/processed/web-Google.prcsr
+mpi ranks             = 4
+threads per rank      = 8
+partition             = vertices
+vertices              = 875713
+edges                 = 5105039
+load seconds          = 0.021633606
+distribution seconds  = 0.010057079
+solve seconds         = 0.393935604
+update imbalance      = 1.18648818224
+work imbalance        = 1.10913610864
+iterations            = 146
+converged             = yes
+last L1 change        = 8.89111561276e-13
+one-step residual     = 7.54695955815e-13
+rank sum error        = 2.60014232367e-13
+validation            = PASS
+top 0 ranks:
+Measured run 1/5: partition=vertices config=4x8
+mode                  = hybrid
+dataset               = data/processed/web-Google.prcsr
+mpi ranks             = 4
+threads per rank      = 8
+partition             = vertices
+vertices              = 875713
+edges                 = 5105039
+load seconds          = 0.02154882
+distribution seconds  = 0.010008889
+solve seconds         = 0.382219186
+update imbalance      = 1.1827987487
+work imbalance        = 1.10913610864
+iterations            = 146
+converged             = yes
+last L1 change        = 8.89120230658e-13
+one-step residual     = 7.54704027086e-13
+rank sum error        = 2.60236276972e-13
+validation            = PASS
+top 0 ranks:
+Measured run 2/5: partition=vertices config=4x8
+mode                  = hybrid
+dataset               = data/processed/web-Google.prcsr
+mpi ranks             = 4
+threads per rank      = 8
+partition             = vertices
+vertices              = 875713
+edges                 = 5105039
+load seconds          = 0.021381564
+distribution seconds  = 0.010018462
+solve seconds         = 0.393736307
+update imbalance      = 1.18818178237
+work imbalance        = 1.10913610864
+iterations            = 146
+converged             = yes
+last L1 change        = 8.89114580207e-13
+one-step residual     = 7.54699060138e-13
+rank sum error        = 2.60014232367e-13
+validation            = PASS
+top 0 ranks:
+Measured run 3/5: partition=vertices config=4x8
+mode                  = hybrid
+dataset               = data/processed/web-Google.prcsr
+mpi ranks             = 4
+threads per rank      = 8
+partition             = vertices
+vertices              = 875713
+edges                 = 5105039
+load seconds          = 0.021517302
+distribution seconds  = 0.010039842
+solve seconds         = 0.402826802
+update imbalance      = 1.18094468901
+work imbalance        = 1.10913610864
+iterations            = 146
+converged             = yes
+last L1 change        = 8.89156870021e-13
+one-step residual     = 7.54684591968e-13
+rank sum error        = 2.60014232367e-13
+validation            = PASS
+top 0 ranks:
+Measured run 4/5: partition=vertices config=4x8
+mode                  = hybrid
+dataset               = data/processed/web-Google.prcsr
+mpi ranks             = 4
+threads per rank      = 8
+partition             = vertices
+vertices              = 875713
+edges                 = 5105039
+load seconds          = 0.02195499
+distribution seconds  = 0.009963563
+solve seconds         = 0.378985489
+update imbalance      = 1.18560678923
+work imbalance        = 1.10913610864
+iterations            = 146
+converged             = yes
+last L1 change        = 8.89154566515e-13
+one-step residual     = 7.5468245861e-13
+rank sum error        = 2.60014232367e-13
+validation            = PASS
+top 0 ranks:
+Measured run 5/5: partition=vertices config=4x8
+mode                  = hybrid
+dataset               = data/processed/web-Google.prcsr
+mpi ranks             = 4
+threads per rank      = 8
+partition             = vertices
+vertices              = 875713
+edges                 = 5105039
+load seconds          = 0.022140182
+distribution seconds  = 0.010015862
+solve seconds         = 0.394180577
+update imbalance      = 1.18013483671
+work imbalance        = 1.10913610864
+iterations            = 146
+converged             = yes
+last L1 change        = 8.89120217476e-13
+one-step residual     = 7.54704012105e-13
+rank sum error        = 2.60236276972e-13
+validation            = PASS
+top 0 ranks:
+Warm-up: partition=in-edges config=32x1
+mode                  = mpi
+dataset               = data/processed/web-Google.prcsr
+mpi ranks             = 32
+threads per rank      = 1
+partition             = in-edges
+vertices              = 875713
+edges                 = 5105039
+load seconds          = 0.022384617
+distribution seconds  = 0.013335456
+solve seconds         = 0.753689159
+update imbalance      = 1.04166377329
+work imbalance        = 1.00557789388
+iterations            = 146
+converged             = yes
+last L1 change        = 8.89163343629e-13
+one-step residual     = 7.54683577647e-13
+rank sum error        = 2.60236276972e-13
+validation            = PASS
+top 0 ranks:
+Measured run 1/5: partition=in-edges config=32x1
+mode                  = mpi
+dataset               = data/processed/web-Google.prcsr
+mpi ranks             = 32
+threads per rank      = 1
+partition             = in-edges
+vertices              = 875713
+edges                 = 5105039
+load seconds          = 0.022045389
+distribution seconds  = 0.013845943
+solve seconds         = 0.751215666
+update imbalance      = 1.0417901886
+work imbalance        = 1.00557789388
+iterations            = 146
+converged             = yes
+last L1 change        = 8.89163343629e-13
+one-step residual     = 7.54683577647e-13
+rank sum error        = 2.60236276972e-13
+validation            = PASS
+top 0 ranks:
+Measured run 2/5: partition=in-edges config=32x1
+mode                  = mpi
+dataset               = data/processed/web-Google.prcsr
+mpi ranks             = 32
+threads per rank      = 1
+partition             = in-edges
+vertices              = 875713
+edges                 = 5105039
+load seconds          = 0.022004185
+distribution seconds  = 0.014033937
+solve seconds         = 0.744432236
+update imbalance      = 1.04350965734
+work imbalance        = 1.00557789388
+iterations            = 146
+converged             = yes
+last L1 change        = 8.89163343629e-13
+one-step residual     = 7.54683577647e-13
+rank sum error        = 2.60236276972e-13
+validation            = PASS
+top 0 ranks:
+Measured run 3/5: partition=in-edges config=32x1
+mode                  = mpi
+dataset               = data/processed/web-Google.prcsr
+mpi ranks             = 32
+threads per rank      = 1
+partition             = in-edges
+vertices              = 875713
+edges                 = 5105039
+load seconds          = 0.02208252
+distribution seconds  = 0.013711577
+solve seconds         = 0.743435538
+update imbalance      = 1.04226544456
+work imbalance        = 1.00557789388
+iterations            = 146
+converged             = yes
+last L1 change        = 8.89163343629e-13
+one-step residual     = 7.54683577647e-13
+rank sum error        = 2.60236276972e-13
+validation            = PASS
+top 0 ranks:
+Measured run 4/5: partition=in-edges config=32x1
+mode                  = mpi
+dataset               = data/processed/web-Google.prcsr
+mpi ranks             = 32
+threads per rank      = 1
+partition             = in-edges
+vertices              = 875713
+edges                 = 5105039
+load seconds          = 0.022090035
+distribution seconds  = 0.014152899
+solve seconds         = 0.74627663
+update imbalance      = 1.04300561973
+work imbalance        = 1.00557789388
+iterations            = 146
+converged             = yes
+last L1 change        = 8.89163343629e-13
+one-step residual     = 7.54683577647e-13
+rank sum error        = 2.60236276972e-13
+validation            = PASS
+top 0 ranks:
+Measured run 5/5: partition=in-edges config=32x1
+mode                  = mpi
+dataset               = data/processed/web-Google.prcsr
+mpi ranks             = 32
+threads per rank      = 1
+partition             = in-edges
+vertices              = 875713
+edges                 = 5105039
+load seconds          = 0.022030208
+distribution seconds  = 0.014239701
+solve seconds         = 0.745537775
+update imbalance      = 1.04326710174
+work imbalance        = 1.00557789388
+iterations            = 146
+converged             = yes
+last L1 change        = 8.89163343629e-13
+one-step residual     = 7.54683577647e-13
+rank sum error        = 2.60236276972e-13
+validation            = PASS
+top 0 ranks:
+Warm-up: partition=in-edges config=4x8
+mode                  = hybrid
+dataset               = data/processed/web-Google.prcsr
+mpi ranks             = 4
+threads per rank      = 8
+partition             = in-edges
+vertices              = 875713
+edges                 = 5105039
+load seconds          = 0.021657838
+distribution seconds  = 0.011846991
+solve seconds         = 0.389268811
+update imbalance      = 1.09177682968
+work imbalance        = 1.00000401287
+iterations            = 146
+converged             = yes
+last L1 change        = 8.89155994506e-13
+one-step residual     = 7.54680118629e-13
+rank sum error        = 2.60236276972e-13
+validation            = PASS
+top 0 ranks:
+Measured run 1/5: partition=in-edges config=4x8
+mode                  = hybrid
+dataset               = data/processed/web-Google.prcsr
+mpi ranks             = 4
+threads per rank      = 8
+partition             = in-edges
+vertices              = 875713
+edges                 = 5105039
+load seconds          = 0.021881027
+distribution seconds  = 0.011868104
+solve seconds         = 0.394223046
+update imbalance      = 1.09307094348
+work imbalance        = 1.00000401287
+iterations            = 146
+converged             = yes
+last L1 change        = 8.89166094739e-13
+one-step residual     = 7.5468599222e-13
+rank sum error        = 2.60458321577e-13
+validation            = PASS
+top 0 ranks:
+Measured run 2/5: partition=in-edges config=4x8
+mode                  = hybrid
+dataset               = data/processed/web-Google.prcsr
+mpi ranks             = 4
+threads per rank      = 8
+partition             = in-edges
+vertices              = 875713
+edges                 = 5105039
+load seconds          = 0.021377735
+distribution seconds  = 0.011881002
+solve seconds         = 0.405634313
+update imbalance      = 1.10666772562
+work imbalance        = 1.00000401287
+iterations            = 146
+converged             = yes
+last L1 change        = 8.89155942308e-13
+one-step residual     = 7.54636291026e-13
+rank sum error        = 2.60236276972e-13
+validation            = PASS
+top 0 ranks:
+Measured run 3/5: partition=in-edges config=4x8
+mode                  = hybrid
+dataset               = data/processed/web-Google.prcsr
+mpi ranks             = 4
+threads per rank      = 8
+partition             = in-edges
+vertices              = 875713
+edges                 = 5105039
+load seconds          = 0.021425115
+distribution seconds  = 0.011961368
+solve seconds         = 0.398011156
+update imbalance      = 1.09163151973
+work imbalance        = 1.00000401287
+iterations            = 146
+converged             = yes
+last L1 change        = 8.89165869164e-13
+one-step residual     = 7.54642561823e-13
+rank sum error        = 2.60458321577e-13
+validation            = PASS
+top 0 ranks:
+Measured run 4/5: partition=in-edges config=4x8
+mode                  = hybrid
+dataset               = data/processed/web-Google.prcsr
+mpi ranks             = 4
+threads per rank      = 8
+partition             = in-edges
+vertices              = 875713
+edges                 = 5105039
+load seconds          = 0.021501212
+distribution seconds  = 0.011831154
+solve seconds         = 0.401358412
+update imbalance      = 1.10756043767
+work imbalance        = 1.00000401287
+iterations            = 146
+converged             = yes
+last L1 change        = 8.89165932532e-13
+one-step residual     = 7.54686205249e-13
+rank sum error        = 2.60458321577e-13
+validation            = PASS
+top 0 ranks:
+Measured run 5/5: partition=in-edges config=4x8
+mode                  = hybrid
+dataset               = data/processed/web-Google.prcsr
+mpi ranks             = 4
+threads per rank      = 8
+partition             = in-edges
+vertices              = 875713
+edges                 = 5105039
+load seconds          = 0.021585459
+distribution seconds  = 0.011844516
+solve seconds         = 0.396190829
+update imbalance      = 1.09158302707
+work imbalance        = 1.00000401287
+iterations            = 146
+converged             = yes
+last L1 change        = 8.89166174095e-13
+one-step residual     = 7.54686036266e-13
+rank sum error        = 2.60458321577e-13
+validation            = PASS
+top 0 ranks:
+Completed: results/vanda/e3/raw/1510351-e3-google.csv

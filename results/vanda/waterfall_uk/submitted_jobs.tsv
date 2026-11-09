@@ -1,0 +1,2 @@
+job_id	dataset	allocated_cpus	layouts	nodes	memory_per_node
+1520644.stdct-mgmt-02	uk-2002	32	1x1,32x1,2x16	1	48gb

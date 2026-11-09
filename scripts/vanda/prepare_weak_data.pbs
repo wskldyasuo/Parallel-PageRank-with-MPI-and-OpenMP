@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+#PBS -q auto_free
+#PBS -j oe
+
+set -euo pipefail
+
+if [[ -f /etc/profile.d/modules.sh ]]; then
+    source /etc/profile.d/modules.sh
+fi
+module load openmpi/gcc/64/4.1.8
+
+: "${PROJECT_DIR:?PROJECT_DIR must be supplied with qsub -v}"
+: "${WEAK_DATA_DIR:?WEAK_DATA_DIR must be supplied with qsub -v}"
+
+cd "$PROJECT_DIR"
+make -j4 all
+mkdir -p "$WEAK_DATA_DIR"
+
+berk_input="$PROJECT_DIR/data/processed/web-BerkStan.prcsr"
+uk_input="$PROJECT_DIR/data/processed/uk-2002.prcsr"
+
+ln -sfn "$berk_input" "$WEAK_DATA_DIR/berkstan-r1.prcsr"
+for replicas in 2 4 8 16 32; do
+    output="$WEAK_DATA_DIR/berkstan-r${replicas}.prcsr"
+    if [[ ! -s "$output" ]]; then
+        ./build/generate_web_graph --input "$berk_input" \
+            --replicas "$replicas" --output "$output"
+    fi
+done
+
+for denominator in 32 16 8 4 2; do
+    output="$WEAK_DATA_DIR/uk-induced-1of${denominator}.prcsr"
+    if [[ ! -s "$output" ]]; then
+        ./build/sample_induced_csr --input "$uk_input" \
+            --denominator "$denominator" --seed 5208 --output "$output"
+    fi
+done
+ln -sfn "$uk_input" "$WEAK_DATA_DIR/uk-induced-1of1.prcsr"
+
+find "$WEAK_DATA_DIR" -maxdepth 1 -type f -name '*.prcsr' -print0 \
+    | sort -z | xargs -0 sha256sum > "$WEAK_DATA_DIR/SHA256SUMS"
+touch "$WEAK_DATA_DIR/READY"
+echo "Weak-scaling data ready in $WEAK_DATA_DIR"

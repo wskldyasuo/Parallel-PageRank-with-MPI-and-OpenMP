@@ -1,0 +1,23 @@
+{
+  "networkx_input": "data/raw/web-Google.txt.gz",
+  "networkx_input_sha256": "bcac0af0471d749f4a8c010bca92b61cf2868a0570741de06892fc062f265ea6",
+  "cpp_input": "data/processed/web-Google.prcsr",
+  "cpp_input_sha256": "e59709804cfe4a48815a36c281e25fd3021105035d92b289767d06907b91815b",
+  "cpp_id_mode": "dense-sorted",
+  "vertices": 875713,
+  "edges": 5105039,
+  "alpha": 0.85,
+  "reference_global_epsilon": 1e-13,
+  "max_iterations": 1000,
+  "l1_error": 1.198341886695584e-12,
+  "max_error": 7.317063621670172e-15,
+  "cpp_rank_sum_error": 3.019806626980426e-14,
+  "graph_load_seconds": 17.687483166111633,
+  "networkx_seconds": 10.68811429082416,
+  "cpp_seconds": 3.8036539999302477,
+  "python_version": "3.12.14",
+  "networkx_version": "3.7",
+  "numpy_version": "2.3.5",
+  "scipy_version": "1.18.1",
+  "accepted": true
+}

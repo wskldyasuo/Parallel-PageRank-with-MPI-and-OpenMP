@@ -1,0 +1,17 @@
+job_id	suite	dataset	total_cpus	nodes	memory_per_node
+1510407.stdct-mgmt-02	phase	google	4	1	16gb
+1510408.stdct-mgmt-02	phase	google	32	1	16gb
+1510409.stdct-mgmt-02	phase	google	64	2	12gb
+1510410.stdct-mgmt-02	phase	google	128	4	12gb
+1510411.stdct-mgmt-02	phase	berkstan	4	1	16gb
+1510412.stdct-mgmt-02	phase	berkstan	32	1	16gb
+1510413.stdct-mgmt-02	phase	berkstan	64	2	12gb
+1510414.stdct-mgmt-02	phase	berkstan	128	4	12gb
+1510415.stdct-mgmt-02	phase	enwiki	4	1	32gb
+1510416.stdct-mgmt-02	phase	enwiki	32	1	32gb
+1510417.stdct-mgmt-02	phase	enwiki	64	2	24gb
+1510418.stdct-mgmt-02	phase	enwiki	128	4	24gb
+1510419.stdct-mgmt-02	phase	uk	4	1	48gb
+1510420.stdct-mgmt-02	phase	uk	32	1	48gb
+1510421.stdct-mgmt-02	phase	uk	64	2	32gb
+1510422.stdct-mgmt-02	phase	uk	128	4	32gb

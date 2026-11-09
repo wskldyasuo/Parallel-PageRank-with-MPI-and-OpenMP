@@ -1,0 +1,282 @@
+PBS job:      1510409.stdct-mgmt-02
+Dataset:      data/processed/web-Google.prcsr
+Total CPUs:   64
+Nodes:        2
+Metrics file: results/vanda/phase/raw/1510409-phase-google-64.csv
+Warm-up: 64x1
+mode                  = mpi
+dataset               = data/processed/web-Google.prcsr
+mpi ranks             = 64
+threads per rank      = 1
+partition             = vertices
+vertices              = 875713
+edges                 = 5105039
+load seconds          = 0.023637869
+distribution seconds  = 0.037924928
+solve seconds         = 2.812899619
+compute seconds (max) = 0.300934224
+Allreduce seconds (max)= 0.715007002
+Allgatherv seconds (max)= 2.377983083
+update imbalance      = 1.44274179093
+work imbalance        = 1.62547050939
+iterations            = 146
+converged             = yes
+last L1 change        = 8.8916659613e-13
+one-step residual     = 7.54686125204e-13
+rank sum error        = 2.60236276972e-13
+validation            = PASS
+top 0 ranks:
+Measured run 1/5: 64x1
+mode                  = mpi
+dataset               = data/processed/web-Google.prcsr
+mpi ranks             = 64
+threads per rank      = 1
+partition             = vertices
+vertices              = 875713
+edges                 = 5105039
+load seconds          = 0.017039532
+distribution seconds  = 0.033943637
+solve seconds         = 2.427709406
+compute seconds (max) = 0.241958876
+Allreduce seconds (max)= 0.570734617
+Allgatherv seconds (max)= 1.976803151
+update imbalance      = 1.31867515612
+work imbalance        = 1.62547050939
+iterations            = 146
+converged             = yes
+last L1 change        = 8.8916659613e-13
+one-step residual     = 7.54686125204e-13
+rank sum error        = 2.60236276972e-13
+validation            = PASS
+top 0 ranks:
+Measured run 2/5: 64x1
+mode                  = mpi
+dataset               = data/processed/web-Google.prcsr
+mpi ranks             = 64
+threads per rank      = 1
+partition             = vertices
+vertices              = 875713
+edges                 = 5105039
+load seconds          = 0.01677079
+distribution seconds  = 0.030389472
+solve seconds         = 2.623156765
+compute seconds (max) = 0.243370769
+Allreduce seconds (max)= 0.62476768
+Allgatherv seconds (max)= 2.257640963
+update imbalance      = 1.32516942443
+work imbalance        = 1.62547050939
+iterations            = 146
+converged             = yes
+last L1 change        = 8.8916659613e-13
+one-step residual     = 7.54686125204e-13
+rank sum error        = 2.60236276972e-13
+validation            = PASS
+top 0 ranks:
+Measured run 3/5: 64x1
+mode                  = mpi
+dataset               = data/processed/web-Google.prcsr
+mpi ranks             = 64
+threads per rank      = 1
+partition             = vertices
+vertices              = 875713
+edges                 = 5105039
+load seconds          = 0.016736121
+distribution seconds  = 0.028955669
+solve seconds         = 2.401547406
+compute seconds (max) = 0.239495401
+Allreduce seconds (max)= 0.552198268
+Allgatherv seconds (max)= 1.989620297
+update imbalance      = 1.31284994042
+work imbalance        = 1.62547050939
+iterations            = 146
+converged             = yes
+last L1 change        = 8.8916659613e-13
+one-step residual     = 7.54686125204e-13
+rank sum error        = 2.60236276972e-13
+validation            = PASS
+top 0 ranks:
+Measured run 4/5: 64x1
+mode                  = mpi
+dataset               = data/processed/web-Google.prcsr
+mpi ranks             = 64
+threads per rank      = 1
+partition             = vertices
+vertices              = 875713
+edges                 = 5105039
+load seconds          = 0.017079664
+distribution seconds  = 0.03385091
+solve seconds         = 2.516009248
+compute seconds (max) = 0.241900413
+Allreduce seconds (max)= 0.58264706
+Allgatherv seconds (max)= 2.081173
+update imbalance      = 1.32172466248
+work imbalance        = 1.62547050939
+iterations            = 146
+converged             = yes
+last L1 change        = 8.8916659613e-13
+one-step residual     = 7.54686125204e-13
+rank sum error        = 2.60236276972e-13
+validation            = PASS
+top 0 ranks:
+Measured run 5/5: 64x1
+mode                  = mpi
+dataset               = data/processed/web-Google.prcsr
+mpi ranks             = 64
+threads per rank      = 1
+partition             = vertices
+vertices              = 875713
+edges                 = 5105039
+load seconds          = 0.017455146
+distribution seconds  = 0.034115504
+solve seconds         = 2.376059161
+compute seconds (max) = 0.242871441
+Allreduce seconds (max)= 0.584508226
+Allgatherv seconds (max)= 1.992530785
+update imbalance      = 1.32422770794
+work imbalance        = 1.62547050939
+iterations            = 146
+converged             = yes
+last L1 change        = 8.8916659613e-13
+one-step residual     = 7.54686125204e-13
+rank sum error        = 2.60236276972e-13
+validation            = PASS
+top 0 ranks:
+Warm-up: 8x8
+mode                  = hybrid
+dataset               = data/processed/web-Google.prcsr
+mpi ranks             = 8
+threads per rank      = 8
+partition             = vertices
+vertices              = 875713
+edges                 = 5105039
+load seconds          = 0.016136496
+distribution seconds  = 0.01278081
+solve seconds         = 0.664489175
+compute seconds (max) = 0.107639365
+Allreduce seconds (max)= 0.17727009
+Allgatherv seconds (max)= 0.509179311
+update imbalance      = 1.37050298231
+work imbalance        = 1.20780931896
+iterations            = 146
+converged             = yes
+last L1 change        = 8.89164526563e-13
+one-step residual     = 7.54684577887e-13
+rank sum error        = 2.60236276972e-13
+validation            = PASS
+top 0 ranks:
+Measured run 1/5: 8x8
+mode                  = hybrid
+dataset               = data/processed/web-Google.prcsr
+mpi ranks             = 8
+threads per rank      = 8
+partition             = vertices
+vertices              = 875713
+edges                 = 5105039
+load seconds          = 0.015830881
+distribution seconds  = 0.016067552
+solve seconds         = 0.678863257
+compute seconds (max) = 0.106284901
+Allreduce seconds (max)= 0.168878045
+Allgatherv seconds (max)= 0.51743021
+update imbalance      = 1.3504205264
+work imbalance        = 1.20780931896
+iterations            = 146
+converged             = yes
+last L1 change        = 8.89164420261e-13
+one-step residual     = 7.5468454607e-13
+rank sum error        = 2.60236276972e-13
+validation            = PASS
+top 0 ranks:
+Measured run 2/5: 8x8
+mode                  = hybrid
+dataset               = data/processed/web-Google.prcsr
+mpi ranks             = 8
+threads per rank      = 8
+partition             = vertices
+vertices              = 875713
+edges                 = 5105039
+load seconds          = 0.015595941
+distribution seconds  = 0.015094481
+solve seconds         = 0.679228087
+compute seconds (max) = 0.106434536
+Allreduce seconds (max)= 0.177185477
+Allgatherv seconds (max)= 0.51413704
+update imbalance      = 1.36222002973
+work imbalance        = 1.20780931896
+iterations            = 146
+converged             = yes
+last L1 change        = 8.89164612855e-13
+one-step residual     = 7.54684637549e-13
+rank sum error        = 2.60236276972e-13
+validation            = PASS
+top 0 ranks:
+Measured run 3/5: 8x8
+mode                  = hybrid
+dataset               = data/processed/web-Google.prcsr
+mpi ranks             = 8
+threads per rank      = 8
+partition             = vertices
+vertices              = 875713
+edges                 = 5105039
+load seconds          = 0.015337908
+distribution seconds  = 0.014970919
+solve seconds         = 0.680504568
+compute seconds (max) = 0.104954458
+Allreduce seconds (max)= 0.179010512
+Allgatherv seconds (max)= 0.519844034
+update imbalance      = 1.33267994206
+work imbalance        = 1.20780931896
+iterations            = 146
+converged             = yes
+last L1 change        = 8.89164639113e-13
+one-step residual     = 7.54684538923e-13
+rank sum error        = 2.60236276972e-13
+validation            = PASS
+top 0 ranks:
+Measured run 4/5: 8x8
+mode                  = hybrid
+dataset               = data/processed/web-Google.prcsr
+mpi ranks             = 8
+threads per rank      = 8
+partition             = vertices
+vertices              = 875713
+edges                 = 5105039
+load seconds          = 0.015622285
+distribution seconds  = 0.014104607
+solve seconds         = 0.694145398
+compute seconds (max) = 0.105728951
+Allreduce seconds (max)= 0.186109581
+Allgatherv seconds (max)= 0.533346985
+update imbalance      = 1.35423674203
+work imbalance        = 1.20780931896
+iterations            = 146
+converged             = yes
+last L1 change        = 8.89164448319e-13
+one-step residual     = 7.54684583922e-13
+rank sum error        = 2.60236276972e-13
+validation            = PASS
+top 0 ranks:
+Measured run 5/5: 8x8
+mode                  = hybrid
+dataset               = data/processed/web-Google.prcsr
+mpi ranks             = 8
+threads per rank      = 8
+partition             = vertices
+vertices              = 875713
+edges                 = 5105039
+load seconds          = 0.016088399
+distribution seconds  = 0.015862535
+solve seconds         = 0.698682289
+compute seconds (max) = 0.107872193
+Allreduce seconds (max)= 0.207203301
+Allgatherv seconds (max)= 0.540108363
+update imbalance      = 1.37070620483
+work imbalance        = 1.20780931896
+iterations            = 146
+converged             = yes
+last L1 change        = 8.89164403903e-13
+one-step residual     = 7.54684529817e-13
+rank sum error        = 2.60236276972e-13
+validation            = PASS
+top 0 ranks:
+Completed: results/vanda/phase/raw/1510409-phase-google-64.csv

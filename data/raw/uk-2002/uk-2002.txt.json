@@ -1,0 +1,13 @@
+{
+  "source": "LAW uk-2002 WebGraph",
+  "source_url": "https://law.di.unimi.it/webdata/uk-2002/",
+  "nodes": 18520486,
+  "edges": 298113762,
+  "header_lines": 3,
+  "total_lines": 298113765,
+  "bytes": 5042641640,
+  "conversion_seconds": 13.9,
+  "converter": "tools/ConvertWebGraphToTxt.java",
+  "webgraph_version": "3.6.12",
+  "sha256": "8f8753b20e26cef04710936ed9a6c8c1c23ed4b37e77e3e76cb5aeeaa295386e"
+}

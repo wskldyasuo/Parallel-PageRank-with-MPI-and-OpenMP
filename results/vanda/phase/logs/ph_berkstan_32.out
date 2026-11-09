@@ -1,0 +1,282 @@
+PBS job:      1510412.stdct-mgmt-02
+Dataset:      data/processed/web-BerkStan.prcsr
+Total CPUs:   32
+Nodes:        1
+Metrics file: results/vanda/phase/raw/1510412-phase-berkstan-32.csv
+Warm-up: 32x1
+mode                  = mpi
+dataset               = data/processed/web-BerkStan.prcsr
+mpi ranks             = 32
+threads per rank      = 1
+partition             = vertices
+vertices              = 685230
+edges                 = 7600595
+load seconds          = 0.139551285
+distribution seconds  = 0.012632283
+solve seconds         = 0.599117338
+compute seconds (max) = 0.238501589
+Allreduce seconds (max)= 0.220494806
+Allgatherv seconds (max)= 0.348435485
+update imbalance      = 2.78783488539
+work imbalance        = 2.92378272532
+iterations            = 148
+converged             = yes
+last L1 change        = 9.19667590022e-13
+one-step residual     = 7.8054800935e-13
+rank sum error        = 1.94666505138e-12
+validation            = PASS
+top 0 ranks:
+Measured run 1/5: 32x1
+mode                  = mpi
+dataset               = data/processed/web-BerkStan.prcsr
+mpi ranks             = 32
+threads per rank      = 1
+partition             = vertices
+vertices              = 685230
+edges                 = 7600595
+load seconds          = 0.025506842
+distribution seconds  = 0.013067955
+solve seconds         = 0.601844148
+compute seconds (max) = 0.238621285
+Allreduce seconds (max)= 0.220723262
+Allgatherv seconds (max)= 0.353566058
+update imbalance      = 2.78486512969
+work imbalance        = 2.92378272532
+iterations            = 148
+converged             = yes
+last L1 change        = 9.19667590022e-13
+one-step residual     = 7.8054800935e-13
+rank sum error        = 1.94666505138e-12
+validation            = PASS
+top 0 ranks:
+Measured run 2/5: 32x1
+mode                  = mpi
+dataset               = data/processed/web-BerkStan.prcsr
+mpi ranks             = 32
+threads per rank      = 1
+partition             = vertices
+vertices              = 685230
+edges                 = 7600595
+load seconds          = 0.024683905
+distribution seconds  = 0.012784299
+solve seconds         = 0.599138465
+compute seconds (max) = 0.238792929
+Allreduce seconds (max)= 0.220790297
+Allgatherv seconds (max)= 0.349659228
+update imbalance      = 2.78765155518
+work imbalance        = 2.92378272532
+iterations            = 148
+converged             = yes
+last L1 change        = 9.19667590022e-13
+one-step residual     = 7.8054800935e-13
+rank sum error        = 1.94666505138e-12
+validation            = PASS
+top 0 ranks:
+Measured run 3/5: 32x1
+mode                  = mpi
+dataset               = data/processed/web-BerkStan.prcsr
+mpi ranks             = 32
+threads per rank      = 1
+partition             = vertices
+vertices              = 685230
+edges                 = 7600595
+load seconds          = 0.023639355
+distribution seconds  = 0.014735105
+solve seconds         = 0.59810682
+compute seconds (max) = 0.238622249
+Allreduce seconds (max)= 0.220045262
+Allgatherv seconds (max)= 0.347123702
+update imbalance      = 2.78666995436
+work imbalance        = 2.92378272532
+iterations            = 148
+converged             = yes
+last L1 change        = 9.19667590022e-13
+one-step residual     = 7.8054800935e-13
+rank sum error        = 1.94666505138e-12
+validation            = PASS
+top 0 ranks:
+Measured run 4/5: 32x1
+mode                  = mpi
+dataset               = data/processed/web-BerkStan.prcsr
+mpi ranks             = 32
+threads per rank      = 1
+partition             = vertices
+vertices              = 685230
+edges                 = 7600595
+load seconds          = 0.023869037
+distribution seconds  = 0.01314873
+solve seconds         = 0.598519754
+compute seconds (max) = 0.238484503
+Allreduce seconds (max)= 0.222142982
+Allgatherv seconds (max)= 0.350983511
+update imbalance      = 2.78712678038
+work imbalance        = 2.92378272532
+iterations            = 148
+converged             = yes
+last L1 change        = 9.19667590022e-13
+one-step residual     = 7.8054800935e-13
+rank sum error        = 1.94666505138e-12
+validation            = PASS
+top 0 ranks:
+Measured run 5/5: 32x1
+mode                  = mpi
+dataset               = data/processed/web-BerkStan.prcsr
+mpi ranks             = 32
+threads per rank      = 1
+partition             = vertices
+vertices              = 685230
+edges                 = 7600595
+load seconds          = 0.023746763
+distribution seconds  = 0.012981313
+solve seconds         = 0.598306524
+compute seconds (max) = 0.238634357
+Allreduce seconds (max)= 0.219682555
+Allgatherv seconds (max)= 0.347544074
+update imbalance      = 2.78881972909
+work imbalance        = 2.92378272532
+iterations            = 148
+converged             = yes
+last L1 change        = 9.19667590022e-13
+one-step residual     = 7.8054800935e-13
+rank sum error        = 1.94666505138e-12
+validation            = PASS
+top 0 ranks:
+Warm-up: 4x8
+mode                  = hybrid
+dataset               = data/processed/web-BerkStan.prcsr
+mpi ranks             = 4
+threads per rank      = 8
+partition             = vertices
+vertices              = 685230
+edges                 = 7600595
+load seconds          = 0.022407552
+distribution seconds  = 0.012422983
+solve seconds         = 0.396093503
+compute seconds (max) = 0.238756618
+Allreduce seconds (max)= 0.126984211
+Allgatherv seconds (max)= 0.153390577
+update imbalance      = 1.52620511582
+work imbalance        = 1.11562433433
+iterations            = 148
+converged             = yes
+last L1 change        = 9.19667590022e-13
+one-step residual     = 7.8054800935e-13
+rank sum error        = 1.94666505138e-12
+validation            = PASS
+top 0 ranks:
+Measured run 1/5: 4x8
+mode                  = hybrid
+dataset               = data/processed/web-BerkStan.prcsr
+mpi ranks             = 4
+threads per rank      = 8
+partition             = vertices
+vertices              = 685230
+edges                 = 7600595
+load seconds          = 0.024358065
+distribution seconds  = 0.012443015
+solve seconds         = 0.410047264
+compute seconds (max) = 0.238377173
+Allreduce seconds (max)= 0.125961579
+Allgatherv seconds (max)= 0.168591071
+update imbalance      = 1.5266857807
+work imbalance        = 1.11562433433
+iterations            = 148
+converged             = yes
+last L1 change        = 9.19667590022e-13
+one-step residual     = 7.8054800935e-13
+rank sum error        = 1.94666505138e-12
+validation            = PASS
+top 0 ranks:
+Measured run 2/5: 4x8
+mode                  = hybrid
+dataset               = data/processed/web-BerkStan.prcsr
+mpi ranks             = 4
+threads per rank      = 8
+partition             = vertices
+vertices              = 685230
+edges                 = 7600595
+load seconds          = 0.02391712
+distribution seconds  = 0.012403877
+solve seconds         = 0.411907343
+compute seconds (max) = 0.23863675
+Allreduce seconds (max)= 0.137541233
+Allgatherv seconds (max)= 0.158200973
+update imbalance      = 1.52127254288
+work imbalance        = 1.11562433433
+iterations            = 148
+converged             = yes
+last L1 change        = 9.1966616473e-13
+one-step residual     = 7.80549594413e-13
+rank sum error        = 1.94666505138e-12
+validation            = PASS
+top 0 ranks:
+Measured run 3/5: 4x8
+mode                  = hybrid
+dataset               = data/processed/web-BerkStan.prcsr
+mpi ranks             = 4
+threads per rank      = 8
+partition             = vertices
+vertices              = 685230
+edges                 = 7600595
+load seconds          = 0.022233224
+distribution seconds  = 0.01246581
+solve seconds         = 0.408202647
+compute seconds (max) = 0.238607294
+Allreduce seconds (max)= 0.125861107
+Allgatherv seconds (max)= 0.166178483
+update imbalance      = 1.52235929591
+work imbalance        = 1.11562433433
+iterations            = 148
+converged             = yes
+last L1 change        = 9.19667590022e-13
+one-step residual     = 7.8054800935e-13
+rank sum error        = 1.94666505138e-12
+validation            = PASS
+top 0 ranks:
+Measured run 4/5: 4x8
+mode                  = hybrid
+dataset               = data/processed/web-BerkStan.prcsr
+mpi ranks             = 4
+threads per rank      = 8
+partition             = vertices
+vertices              = 685230
+edges                 = 7600595
+load seconds          = 0.022170333
+distribution seconds  = 0.012414636
+solve seconds         = 0.400172994
+compute seconds (max) = 0.238372354
+Allreduce seconds (max)= 0.129366917
+Allgatherv seconds (max)= 0.156367005
+update imbalance      = 1.52308199459
+work imbalance        = 1.11562433433
+iterations            = 148
+converged             = yes
+last L1 change        = 9.19667590022e-13
+one-step residual     = 7.8054800935e-13
+rank sum error        = 1.94666505138e-12
+validation            = PASS
+top 0 ranks:
+Measured run 5/5: 4x8
+mode                  = hybrid
+dataset               = data/processed/web-BerkStan.prcsr
+mpi ranks             = 4
+threads per rank      = 8
+partition             = vertices
+vertices              = 685230
+edges                 = 7600595
+load seconds          = 0.022594042
+distribution seconds  = 0.012430147
+solve seconds         = 0.402009967
+compute seconds (max) = 0.238514541
+Allreduce seconds (max)= 0.127039176
+Allgatherv seconds (max)= 0.159736567
+update imbalance      = 1.52226923771
+work imbalance        = 1.11562433433
+iterations            = 148
+converged             = yes
+last L1 change        = 9.19667590022e-13
+one-step residual     = 7.8054800935e-13
+rank sum error        = 1.94666505138e-12
+validation            = PASS
+top 0 ranks:
+Completed: results/vanda/phase/raw/1510412-phase-berkstan-32.csv

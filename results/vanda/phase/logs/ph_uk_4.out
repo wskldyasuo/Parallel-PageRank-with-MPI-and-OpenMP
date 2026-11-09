@@ -1,0 +1,282 @@
+PBS job:      1510419.stdct-mgmt-02
+Dataset:      data/processed/uk-2002.prcsr
+Total CPUs:   4
+Nodes:        1
+Metrics file: results/vanda/phase/raw/1510419-phase-uk-4.csv
+Warm-up: 4x1
+mode                  = mpi
+dataset               = data/processed/uk-2002.prcsr
+mpi ranks             = 4
+threads per rank      = 1
+partition             = vertices
+vertices              = 18520486
+edges                 = 298113762
+load seconds          = 5.281885247
+distribution seconds  = 0.33856657
+solve seconds         = 31.721149091
+compute seconds (max) = 25.913167485
+Allreduce seconds (max)= 6.712216783
+Allgatherv seconds (max)= 5.761559738
+update imbalance      = 1.1857419619
+work imbalance        = 1.17667678198
+iterations            = 141
+converged             = yes
+last L1 change        = 9.72493898569e-13
+one-step residual     = 8.23932800816e-13
+rank sum error        = 3.07198710914e-12
+validation            = PASS
+top 0 ranks:
+Measured run 1/5: 4x1
+mode                  = mpi
+dataset               = data/processed/uk-2002.prcsr
+mpi ranks             = 4
+threads per rank      = 1
+partition             = vertices
+vertices              = 18520486
+edges                 = 298113762
+load seconds          = 0.755025547
+distribution seconds  = 0.339759835
+solve seconds         = 31.873186186
+compute seconds (max) = 25.930945823
+Allreduce seconds (max)= 6.74357357
+Allgatherv seconds (max)= 5.86845829
+update imbalance      = 1.18560876578
+work imbalance        = 1.17667678198
+iterations            = 141
+converged             = yes
+last L1 change        = 9.72493898569e-13
+one-step residual     = 8.23932800816e-13
+rank sum error        = 3.07198710914e-12
+validation            = PASS
+top 0 ranks:
+Measured run 2/5: 4x1
+mode                  = mpi
+dataset               = data/processed/uk-2002.prcsr
+mpi ranks             = 4
+threads per rank      = 1
+partition             = vertices
+vertices              = 18520486
+edges                 = 298113762
+load seconds          = 0.758172402
+distribution seconds  = 0.337807201
+solve seconds         = 31.84775444
+compute seconds (max) = 25.922640276
+Allreduce seconds (max)= 6.739818729
+Allgatherv seconds (max)= 5.850698603
+update imbalance      = 1.18552549722
+work imbalance        = 1.17667678198
+iterations            = 141
+converged             = yes
+last L1 change        = 9.72493898569e-13
+one-step residual     = 8.23932800816e-13
+rank sum error        = 3.07198710914e-12
+validation            = PASS
+top 0 ranks:
+Measured run 3/5: 4x1
+mode                  = mpi
+dataset               = data/processed/uk-2002.prcsr
+mpi ranks             = 4
+threads per rank      = 1
+partition             = vertices
+vertices              = 18520486
+edges                 = 298113762
+load seconds          = 0.708601798
+distribution seconds  = 0.336573462
+solve seconds         = 31.90047085
+compute seconds (max) = 25.916217617
+Allreduce seconds (max)= 6.714395994
+Allgatherv seconds (max)= 5.936322978
+update imbalance      = 1.18547356976
+work imbalance        = 1.17667678198
+iterations            = 141
+converged             = yes
+last L1 change        = 9.72493898569e-13
+one-step residual     = 8.23932800816e-13
+rank sum error        = 3.07198710914e-12
+validation            = PASS
+top 0 ranks:
+Measured run 4/5: 4x1
+mode                  = mpi
+dataset               = data/processed/uk-2002.prcsr
+mpi ranks             = 4
+threads per rank      = 1
+partition             = vertices
+vertices              = 18520486
+edges                 = 298113762
+load seconds          = 0.703416133
+distribution seconds  = 0.338979127
+solve seconds         = 31.97199398
+compute seconds (max) = 25.923870434
+Allreduce seconds (max)= 6.712208947
+Allgatherv seconds (max)= 6.000472659
+update imbalance      = 1.18533337645
+work imbalance        = 1.17667678198
+iterations            = 141
+converged             = yes
+last L1 change        = 9.72493898569e-13
+one-step residual     = 8.23932800816e-13
+rank sum error        = 3.07198710914e-12
+validation            = PASS
+top 0 ranks:
+Measured run 5/5: 4x1
+mode                  = mpi
+dataset               = data/processed/uk-2002.prcsr
+mpi ranks             = 4
+threads per rank      = 1
+partition             = vertices
+vertices              = 18520486
+edges                 = 298113762
+load seconds          = 0.702841021
+distribution seconds  = 0.337198012
+solve seconds         = 31.932188191
+compute seconds (max) = 25.923475827
+Allreduce seconds (max)= 6.703129901
+Allgatherv seconds (max)= 5.974792923
+update imbalance      = 1.18558926511
+work imbalance        = 1.17667678198
+iterations            = 141
+converged             = yes
+last L1 change        = 9.72493898569e-13
+one-step residual     = 8.23932800816e-13
+rank sum error        = 3.07198710914e-12
+validation            = PASS
+top 0 ranks:
+Warm-up: 2x2
+mode                  = hybrid
+dataset               = data/processed/uk-2002.prcsr
+mpi ranks             = 2
+threads per rank      = 2
+partition             = vertices
+vertices              = 18520486
+edges                 = 298113762
+load seconds          = 0.706557748
+distribution seconds  = 0.38261799
+solve seconds         = 29.66788869
+compute seconds (max) = 26.025260035
+Allreduce seconds (max)= 3.864519441
+Allgatherv seconds (max)= 3.618137448
+update imbalance      = 1.08850947116
+work imbalance        = 1.07499075716
+iterations            = 141
+converged             = yes
+last L1 change        = 9.72493898569e-13
+one-step residual     = 8.23932800816e-13
+rank sum error        = 3.07198710914e-12
+validation            = PASS
+top 0 ranks:
+Measured run 1/5: 2x2
+mode                  = hybrid
+dataset               = data/processed/uk-2002.prcsr
+mpi ranks             = 2
+threads per rank      = 2
+partition             = vertices
+vertices              = 18520486
+edges                 = 298113762
+load seconds          = 0.701670943
+distribution seconds  = 0.387141771
+solve seconds         = 29.696801483
+compute seconds (max) = 26.04950853
+Allreduce seconds (max)= 3.852178615
+Allgatherv seconds (max)= 3.624180209
+update imbalance      = 1.08822815617
+work imbalance        = 1.07499075716
+iterations            = 141
+converged             = yes
+last L1 change        = 9.72493898569e-13
+one-step residual     = 8.23932800816e-13
+rank sum error        = 3.07198710914e-12
+validation            = PASS
+top 0 ranks:
+Measured run 2/5: 2x2
+mode                  = hybrid
+dataset               = data/processed/uk-2002.prcsr
+mpi ranks             = 2
+threads per rank      = 2
+partition             = vertices
+vertices              = 18520486
+edges                 = 298113762
+load seconds          = 0.708863123
+distribution seconds  = 0.385940178
+solve seconds         = 29.678603224
+compute seconds (max) = 26.052355983
+Allreduce seconds (max)= 3.857095614
+Allgatherv seconds (max)= 3.603122231
+update imbalance      = 1.0883802906
+work imbalance        = 1.07499075716
+iterations            = 141
+converged             = yes
+last L1 change        = 9.72493898569e-13
+one-step residual     = 8.23932800816e-13
+rank sum error        = 3.07198710914e-12
+validation            = PASS
+top 0 ranks:
+Measured run 3/5: 2x2
+mode                  = hybrid
+dataset               = data/processed/uk-2002.prcsr
+mpi ranks             = 2
+threads per rank      = 2
+partition             = vertices
+vertices              = 18520486
+edges                 = 298113762
+load seconds          = 0.700362378
+distribution seconds  = 0.381254917
+solve seconds         = 29.642100818
+compute seconds (max) = 26.036032795
+Allreduce seconds (max)= 3.849122032
+Allgatherv seconds (max)= 3.58183333
+update imbalance      = 1.08827327144
+work imbalance        = 1.07499075716
+iterations            = 141
+converged             = yes
+last L1 change        = 9.72493898569e-13
+one-step residual     = 8.23932800816e-13
+rank sum error        = 3.07198710914e-12
+validation            = PASS
+top 0 ranks:
+Measured run 4/5: 2x2
+mode                  = hybrid
+dataset               = data/processed/uk-2002.prcsr
+mpi ranks             = 2
+threads per rank      = 2
+partition             = vertices
+vertices              = 18520486
+edges                 = 298113762
+load seconds          = 0.695312231
+distribution seconds  = 0.380051357
+solve seconds         = 29.651677231
+compute seconds (max) = 26.010457081
+Allreduce seconds (max)= 3.849375049
+Allgatherv seconds (max)= 3.618501047
+update imbalance      = 1.08823798677
+work imbalance        = 1.07499075716
+iterations            = 141
+converged             = yes
+last L1 change        = 9.72493898569e-13
+one-step residual     = 8.23932800816e-13
+rank sum error        = 3.07198710914e-12
+validation            = PASS
+top 0 ranks:
+Measured run 5/5: 2x2
+mode                  = hybrid
+dataset               = data/processed/uk-2002.prcsr
+mpi ranks             = 2
+threads per rank      = 2
+partition             = vertices
+vertices              = 18520486
+edges                 = 298113762
+load seconds          = 0.696862109
+distribution seconds  = 0.377930245
+solve seconds         = 29.41123307
+compute seconds (max) = 25.857430584
+Allreduce seconds (max)= 3.807003049
+Allgatherv seconds (max)= 3.531081362
+update imbalance      = 1.08796642708
+work imbalance        = 1.07499075716
+iterations            = 141
+converged             = yes
+last L1 change        = 9.72493898569e-13
+one-step residual     = 8.23932800816e-13
+rank sum error        = 3.07198710914e-12
+validation            = PASS
+top 0 ranks:
+Completed: results/vanda/phase/raw/1510419-phase-uk-4.csv

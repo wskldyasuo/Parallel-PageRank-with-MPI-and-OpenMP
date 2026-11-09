@@ -1,0 +1,4 @@
+# Dense zero-based graph with two isolated vertices
+# Nodes: 4 Edges: 1
+# FromNodeId ToNodeId
+0 1

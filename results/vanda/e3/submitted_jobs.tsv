@@ -1,0 +1,5 @@
+job_id	suite	dataset	total_cpus	nodes	memory_per_node
+1510351.stdct-mgmt-02	e3	google	32	1	16gb
+1510352.stdct-mgmt-02	e3	berkstan	32	1	16gb
+1510353.stdct-mgmt-02	e3	enwiki	32	1	32gb
+1510354.stdct-mgmt-02	e3	uk	32	1	48gb

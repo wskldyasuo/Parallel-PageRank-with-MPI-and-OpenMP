@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+#PBS -q auto_free
+#PBS -j oe
+#PBS -N pagerank_build
+#PBS -l select=1:ncpus=4:mem=8gb
+#PBS -l walltime=00:30:00
+
+set -euo pipefail
+
+if [[ -f /etc/profile.d/modules.sh ]]; then
+    source /etc/profile.d/modules.sh
+fi
+module load openmpi/gcc/64/4.1.8
+
+: "${PROJECT_DIR:?PROJECT_DIR must be supplied with qsub -v}"
+cd "$PROJECT_DIR"
+make clean
+make -j4
+make test
+make test-parallel
